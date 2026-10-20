@@ -1,0 +1,222 @@
+/* ============================
+    ADMIN: BOOKED DATES PANEL
+============================*/
+
+[hidden] { display: none !important; }
+
+.bk-panel {
+    margin-top: 20px;
+    padding: 22px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.bk-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.bk-toolbar .spacer { flex: 1; }
+
+.bk-meta {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.status-pill.ok  { color: #1d6b3f; background: var(--green-light); }
+.status-pill.bad { color: #a13c36; background: #fff5f4; }
+
+.bk-btn {
+    display: inline-block;
+    padding: 9px 14px;
+    color: var(--green);
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.bk-btn:hover { background: var(--green-light); }
+
+.bk-btn.solid {
+    color: #fff;
+    background: var(--green);
+    border-color: var(--green);
+}
+
+.bk-btn.solid:hover { background: var(--green-hover); }
+
+.bk-notice {
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    border-radius: 9px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.bk-notice ul { margin: 6px 0 0; padding-left: 18px; }
+.bk-notice.danger { color: #a13c36; background: #fff5f4; border: 1px solid #f3cfcc; }
+.bk-notice.warn   { color: #8a4b08; background: #fff6e8; border: 1px solid #f3dcb6; }
+
+.bk-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 380px) 1fr;
+    gap: 26px;
+    align-items: start;
+}
+
+/* calendar */
+.bk-cal {
+    padding: 14px;
+    background: var(--page);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.bk-cal-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.bk-cal-head button {
+    width: 32px;
+    height: 32px;
+    color: var(--green);
+    background: var(--white);
+    border: 0;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.bk-cal-head button:disabled { opacity: 0.35; cursor: default; }
+
+.bk-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    text-align: center;
+}
+
+.bk-dow {
+    padding: 4px 0;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.bk-day {
+    position: relative;
+    padding: 7px 0 15px;
+    background: var(--white);
+    border-radius: 7px;
+    font-size: 13px;
+}
+
+.bk-day.past   { color: #b9c0ba; background: transparent; }
+.bk-day.booked { background: #e3e7e4; }
+.bk-day.today  { outline: 2px solid var(--green); }
+
+.bk-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+}
+
+.bk-dots b { width: 6px; height: 6px; border-radius: 50%; }
+.dv { background: var(--green); }
+.dh { background: #c77a1a; }
+
+.bk-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.bk-legend i {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 6px;
+    border-radius: 50%;
+}
+
+/* list */
+.bk-list h3 { margin: 0 0 12px; font-size: 15px; }
+
+.bk-list ul {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.bk-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.bk-item.conflict { background: #fff9f8; border-color: #f3cfcc; }
+
+.bk-tag {
+    flex-shrink: 0;
+    padding: 4px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.bk-tag.venue { color: var(--green); background: var(--green-light); }
+.bk-tag.hall  { color: #8a4b08; background: #fff0dc; }
+.bk-tag.both  { color: #fff; background: var(--green); }
+
+.bk-range {
+    flex: 1;
+    min-width: 0;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.bk-range small {
+    display: block;
+    margin-top: 2px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.bk-when {
+    color: var(--muted);
+    font-size: 12px;
+    text-align: right;
+}
+
+.bk-empty { color: var(--muted); font-size: 13px; }
+
+.bk-past { margin-top: 18px; }
+.bk-past summary { color: var(--muted); font-size: 13px; cursor: pointer; }
+.bk-past ul { margin-top: 10px; opacity: 0.75; }
+
+@media (max-width: 900px) {
+    .bk-layout { grid-template-columns: 1fr; }
+}
+

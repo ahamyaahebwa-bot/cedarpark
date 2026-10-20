@@ -1,0 +1,24 @@
+{
+  "name": "Cedar Park Uganda",
+  "short_name": "Cedar Park",
+  "description": "Cedar Park Uganda: venues for weddings, celebrations and events. Browse spaces, check availability and make a booking.",
+  "id": "./index.html",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#000000",
+  "theme_color": "#f4f8f3",
+  "lang": "en",
+  "icons": [
+    { "src": "images/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "images/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "images/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Book a space", "short_name": "Booking", "url": "booking.html",
+      "icons": [{ "src": "images/icon-192.png", "sizes": "192x192", "type": "image/png" }] },
+    { "name": "View venues", "short_name": "Venues", "url": "venue.html",
+      "icons": [{ "src": "images/icon-192.png", "sizes": "192x192", "type": "image/png" }] }
+  ]
+}

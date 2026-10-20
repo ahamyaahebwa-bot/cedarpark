@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booked dates | Cedar Park</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="bookings.css">
+</head>
+<body class="dashboard-page">
+
+    <aside class="sidebar" id="sidebar">
+        <a href="../index.html" class="brand">Cedar Park<span>.</span></a>
+        <p class="sidebar-label">WORKSPACE</p>
+
+        <nav class="admin-nav">
+            <a href="#overview" class="nav-link active">▦ &nbsp; Overview</a>
+            <a href="#bookings" class="nav-link">▣ &nbsp; Booked dates</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="../index.html" class="logout-button">← &nbsp; Back to website</a>
+        </div>
+    </aside>
+
+    <main class="dashboard-main">
+        <header class="topbar">
+            <button id="menuButton" class="menu-button"
+                aria-label="Toggle navigation">☰</button>
+            <span>Cedar Park</span>
+            <span class="admin-avatar">A</span>
+        </header>
+
+        <section id="overview" class="dashboard-content">
+            <p class="eyebrow">CEDAR PARK</p>
+            <h1>Booked dates</h1>
+            <p class="muted">See which dates are taken for the Venue and the Hall.</p>
+
+            <div class="welcome-panel">
+                <div>
+                    <p class="welcome-tag">YOUR WORKSPACE</p>
+                    <h2>Your bookings at a glance.</h2>
+                    <p>Dates update from your Google Sheet.</p>
+                </div>
+                <div class="welcome-icon">✳</div>
+            </div>
+
+            <div class="stats-grid">
+                <article class="stat-card">
+                    <span class="stat-icon">▣</span>
+                    <p>Booking calendar</p>
+                    <h2>Booked dates</h2>
+                    <a href="#bookings">View calendar →</a>
+                </article>
+
+            </div>
+
+            <section id="bookings" class="management-section">
+                <div>
+                    <p class="eyebrow">AVAILABILITY</p>
+                    <h2>Booked dates</h2>
+                    <p class="muted">Read from your Google Sheet. To add or change a booking, edit the sheet and press Refresh.</p>
+                </div>
+
+                <div class="bk-panel">
+                    <div class="bk-toolbar">
+                        <span class="status-pill" id="bkStatus">Loading...</span>
+                        <span class="bk-meta" id="bkMeta"></span>
+                        <span class="spacer"></span>
+                        <button type="button" class="bk-btn" id="bkRefresh">Refresh</button>
+                        <a class="bk-btn solid" id="bkEdit" href="#" target="_blank" rel="noopener">Edit in Google Sheets</a>
+                    </div>
+
+                    <div id="bkNotices"></div>
+
+                    <div class="bk-layout">
+                        <div>
+                            <div class="bk-cal" id="bkCal"></div>
+                            <p class="bk-legend">
+                                <span><i class="dv"></i>Venue booked</span>
+                                <span><i class="dh"></i>Hall booked</span>
+                            </p>
+                        </div>
+
+                        <div class="bk-list">
+                            <h3>Upcoming bookings</h3>
+                            <ul id="bkList"></ul>
+
+                            <details class="bk-past" id="bkPast" hidden>
+                                <summary>Past bookings (<span id="bkPastCount">0</span>)</summary>
+                                <ul id="bkPastList"></ul>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </section>
+</section>
+    </main>
+
+    <script src="admin.js"></script>
+    <script src="bookings.js"></script>
+</body>
+</html>
+

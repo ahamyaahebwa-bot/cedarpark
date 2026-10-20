@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline | Cedar Park</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 24px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: #f4f8f3;
+            color: #1f2a22;
+        }
+        img { width: 110px; height: auto; }
+        h1 { margin: 0; color: #16452a; font-size: 1.5rem; }
+        p { margin: 0; max-width: 320px; line-height: 1.5; }
+        button {
+            margin-top: 8px;
+            padding: 10px 24px;
+            border: 0;
+            border-radius: 30px;
+            background: #2f6b3f;
+            color: #fff;
+            font: inherit;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/logo.png" alt="Cedar Park logo">
+    <h1>You're offline</h1>
+    <p>Check your internet connection and try again. Pages you've already visited will still open.</p>
+    <button onclick="location.reload()">Try again</button>
+</body>
+</html>
